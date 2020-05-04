@@ -196,7 +196,9 @@ class CardStack extends Component {
         toValue: { x: 0, y: 0 },
         duration: this.props.duration,
       }
-    ).start();
+    ).start(() => {
+      this.props.onSwipe(0,0)
+    });
   }
 
   goBackFromTop() {
